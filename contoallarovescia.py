@@ -6,7 +6,6 @@ while temp == 1:
 
    temp = int(input("Vuoi ripetere l'operazione? \n no [0] \n si [1]"))
    continue
-   if temp == 1 :
-      continue
-   else:
+   if temp == 0 :
       break
+
