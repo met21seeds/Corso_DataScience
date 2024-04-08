@@ -52,12 +52,8 @@ class Ristorante:
         for piatto, prezzo in self.menu.items():
             print(f"{piatto}: {prezzo}€")
 
-# # Chiediamo all'utente di inserire i dettagli del ristorante
-# nome = input("Inserisci il nome del ristorante: ")
-# tipo_cucina = input("Inserisci il tipo di cucina: ")
-
 #Creazione di un'istanza della classe Ristorante
-ristorante = Ristorante() #"Da Mario", "Italiana"
+ristorante = Ristorante()
 
 # testare i metodi se funzionano o meno
 ristorante.descrivi_ristorante()
