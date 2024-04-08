@@ -1,21 +1,18 @@
 # definizione della classe
 class Ristorante:
-    def __init__(self, nome, tipo_cucina):
-        self.nome = nome
-        self.tipo_cucina = tipo_cucina
+    def __init__(self):
+        self.nome = input("Inserisci nome risotrante: ")
+        self.tipo_cucina = input("Inserisci tipo cucina: ")
         self.aperto = True
-        self.menu = {
-            "piatti" : {"pizza margherita","pasta","uovo sodo"},
-            "prezzo" : {"12","10","8"}
-        }
+        self.menu = {}
 
     # metodi della classe
 
     # descrivi ristorante
     def descrivi_ristorante(self):
-        return print(f"Il ristorante {self.nome} offre {self.tipo_cucina}")
+        return print(f"Il ristorante {self.nome} offre cucina {self.tipo_cucina}")
         
-        
+
     # apertura risto --> è aperto o chiuso??
     def stato_apertura(self):
         if self.aperto == True :
@@ -34,11 +31,16 @@ class Ristorante:
         print(f"{self.nome} è ora chiuso.")
 
     #aggiungi un piatto al menu
-    def aggiungi_al_menu(self, piatto, prezzo):
+    def aggiungi_al_menu(self):
         aggiunta = input("Vuoi aggiungere un piatto al menù? \n sì \n no ")
         if aggiunta == "sì":
-            piatto = input("inserisci")
-        self.menu[piatto] = prezzo
+            piatto = input("Inserisci nome piatto: ")
+            prezzo = input("Inserisci prezzo del piatto: ")
+            self.menu[piatto] = prezzo
+            print("Al menu è stato aggiunto", piatto, "con un prezzo di", prezzo)
+        else:
+            print("Ok, nessuna aggiunta per oggi")
+
 
     #togli un piatto dal menù
     def togli_dal_menu(self, piatto):
@@ -50,12 +52,12 @@ class Ristorante:
         for piatto, prezzo in self.menu.items():
             print(f"{piatto}: {prezzo}€")
 
-# Chiediamo all'utente di inserire i dettagli del ristorante
-nome = input("Inserisci il nome del ristorante: ")
-tipo_cucina = input("Inserisci il tipo di cucina: ")
+# # Chiediamo all'utente di inserire i dettagli del ristorante
+# nome = input("Inserisci il nome del ristorante: ")
+# tipo_cucina = input("Inserisci il tipo di cucina: ")
 
 #Creazione di un'istanza della classe Ristorante
-ristorante = Ristorante("Da Mario", "Italiana")
+ristorante = Ristorante() #"Da Mario", "Italiana"
 
 # testare i metodi se funzionano o meno
 ristorante.descrivi_ristorante()
