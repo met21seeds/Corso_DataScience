@@ -23,11 +23,11 @@ conocreato = 0
 while conocreato <=3:
     quest = input("Vuoi creare un gelato?\n")
     if quest == "sì":
-        primo_gusto = input("scegli il primo gusto\n")
-        secondo_gusto = input("scegli il secondo gusto\n")
-        terzo_gusto = input("scegli il terzo gusto\n")
+        gusto1 = input("scegli il primo gusto\n")
+        gusto2 = input("scegli il secondo gusto\n")
+        gusto3 = input("scegli il terzo gusto\n")
         conocreato += 1
-        gelato1 = GelatoScelto(3, 2.5, primo_gusto, secondo_gusto, terzo_gusto)
+        gelato1 = GelatoScelto(3, 2.5, gusto1, gusto2, gusto3)
         print(gelato1.stampaGelato())
     else:
         print("ci vediamo la prossima volta")
