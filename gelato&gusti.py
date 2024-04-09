@@ -19,13 +19,16 @@ class GelatoScelto(Gelato):
     def stampaGelato(self):
         return f"Questo gelato costa {self.prezzo} euro e ha i gusti {self.gusto1}, {self.gusto2}, {self.gusto3}."
 
-# Creazione di istanze della classe GelatoScelto
-gelato1 = GelatoScelto(3, 2.5, "cioccolato", "vaniglia", "fragola")
-gelato2 = GelatoScelto(2, 3.0, "nocciola", "pistacchio" , "crema")
-gelato3 = GelatoScelto(3, 3.5, "mela", "pera", "banana")
-
-# Stampa solo se sono stati venduti almeno 3 coni di gelato
-if Gelato.palline == 3:
-    print(gelato_scelto1.stampaGelato())
-    print(gelato_scelto2.stampaGelato())
-    print(gelato_scelto3.stampaGelato())
+conocreato = 0
+while conocreato <=3:
+    quest = input("Vuoi creare un gelato?\n")
+    if quest == "sì":
+        primo_gusto = input("scegli il primo gusto\n")
+        secondo_gusto = input("scegli il secondo gusto\n")
+        terzo_gusto = input("scegli il terzo gusto\n")
+        conocreato += 1
+        gelato1 = GelatoScelto(3, 2.5, primo_gusto, secondo_gusto, terzo_gusto)
+        print(gelato1.stampaGelato())
+    else:
+        print("ci vediamo la prossima volta")
+        break
